@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import SetupView from './components/SetupView';
 import QuizView from './components/QuizView';
 import ResultView from './components/ResultView';
@@ -14,7 +13,7 @@ const App: React.FC = () => {
     markedForReview: new Array(QUESTIONS.length).fill(false),
     mode: QuizMode.EXAM,
     startTime: null,
-    duration: 33,
+    duration: 50,
     isFinished: false
   });
 
@@ -57,11 +56,11 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto min-h-screen bg-white shadow-2xl relative overflow-hidden flex flex-col">
-      {/* Decorative Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-blue-600 via-indigo-600 to-transparent opacity-10 pointer-events-none"></div>
+    <div className="max-w-md mx-auto min-h-screen bg-white/95 backdrop-blur-md shadow-2xl relative flex flex-col sm:my-8 sm:rounded-[3rem] sm:min-h-[850px] transition-all duration-500">
+      {/* Subtle top gradient bar */}
+      <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 pointer-events-none sm:rounded-t-[3rem]"></div>
       
-      <div className="flex-1 z-10 p-4">
+      <div className="flex-1 z-10 p-4 flex flex-col h-full overflow-hidden">
         {view === 'SETUP' && (
           <SetupView onStart={handleStartQuiz} />
         )}
