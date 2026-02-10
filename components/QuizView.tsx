@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { QuizState, QuizMode } from '../types';
 import { QUESTIONS } from '../constants';
@@ -83,7 +82,7 @@ const QuizView: React.FC<QuizViewProps> = ({ state, onAnswer, onToggleMark, onFi
     <div className="flex flex-col h-full animate-fadeIn relative">
       <div className="flex justify-between items-center mb-3">
         <div className="text-slate-400 text-xs font-bold uppercase tracking-widest">
-          Lucent History Quiz
+          Geography Quiz
         </div>
         <div className={`px-4 py-1.5 rounded-full font-mono font-bold text-sm ${timeLeft < 60 ? 'bg-red-100 text-red-600 animate-pulse' : 'bg-slate-100 text-slate-700'}`}>
           {formatTime(timeLeft)}
