@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geography (à¤­à¥à¤à¥à¤²) Quiz - @vikasNCERT</title>
+    <title>Geography (भूगोल) Quiz - @vikasNCERT</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -52,7 +52,7 @@
             }
         }
 
-        /* Generate different sizes and positions for bubbles */
+        /* Bubble variations */
         .bubble:nth-child(1) { left: 10%; width: 80px; height: 80px; animation-delay: 0s; animation-duration: 18s; }
         .bubble:nth-child(2) { left: 25%; width: 120px; height: 120px; animation-delay: 2s; animation-duration: 22s; }
         .bubble:nth-child(3) { left: 40%; width: 50px; height: 50px; animation-delay: 4s; animation-duration: 15s; }
@@ -79,6 +79,16 @@
             border-radius: 10px;
         }
     </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
 </head>
 <body>
     <div class="bubbles-container">
@@ -92,6 +102,7 @@
         <div class="bubble"></div>
     </div>
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
+    <!-- Explicit module entry point to prevent blank page on static hosts -->
+    <script type="module" src="index.tsx"></script>
 </body>
 </html>
